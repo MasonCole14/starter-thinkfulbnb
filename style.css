@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -60,8 +60,19 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 48px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 header nav ul li {
@@ -71,7 +82,7 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0 10px 0 10px;
 }
 
 header nav ul li a:hover {
@@ -81,8 +92,16 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  font-size: 18px;
   border: 2px solid #ff385c;
   padding: 10px;
+  justify-content: center;
+}
+
+form div {
+ display: flex;
+ justify-content: space-between;
+ margin: 10px;
 }
 
 form label {
@@ -104,6 +123,17 @@ form button {
   width: 100%;
 }
 
+/* ------- About Ideas Host ------ */
+
+section ul {
+  padding-left: 40px;
+}
+
+.about-break {
+  margin: 20px 0;
+}
+ 
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +147,94 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 0;
+  }
+
+  ul {
+    padding-top: 8px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  form input, form select {
+    margin-bottom: 0;
+  }
+
+  form label {
+    padding-right: 5px;
+  }
+
+  form div {
+    flex: 1;
+    margin: 10px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-break {
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
+  }
+
+  .about-break-p {
+    flex: 2;
+    align-self: center;
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+  .ideas {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ideas-img {
+    flex: 1;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .host-img {
+    flex: 1;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .host-text {
+    padding-top: 50px;
+  }
+
+}
